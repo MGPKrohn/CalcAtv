@@ -9,10 +9,10 @@ import java.util.List;
 @RequestMapping("/api")
 public class Calc {
 
-    private List<Integer> numerosInseridos;
+    private static List<Integer> numerosInseridos;
 
     @PostMapping("/calc")
-    public String calcular(@RequestBody List<Integer> numeros) {
+    public static String calcular(@RequestBody List<Integer> numeros) {
 
         numerosInseridos = numeros;
         return "Números inseridos!" + "\n" + "Números inseridos: " + numerosInseridos.size() + " " +  numeros;
